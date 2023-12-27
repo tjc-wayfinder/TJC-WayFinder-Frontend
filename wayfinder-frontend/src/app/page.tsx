@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -11,10 +10,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-[#328C2A] ">
-      <div className="flex flex-col flex-wrap items-center justify-center h-full">
-        <div className="py-5"></div>
-        <Card className=" bg-[#E1ECDE] h-full max-w-[3/4]">
+    <div className="bg-[#328C2A] flex h-screen justify-center items-center ">
+
+      <div >
+        <Card className=" bg-[#E1ECDE] my-5">
           <CardHeader>
             <CardTitle className="bg-white rounded-full text-center py-2 leading-2">
               Welcome to
@@ -33,12 +32,12 @@ export default function Home() {
               quality={100}
             />
           </CardContent>
-          <CardFooter className="flex items-center justify-center">
+          <CardFooter className="flex items-center justify-center basis-1">
             <Button className="bg-[#328C2A]">Get Started!</Button>
           </CardFooter>
         </Card>
-        <div className="text-xs py-5 text-white">This webapp is devloped by the alumni from 04/22</div>
-      </div>
-    </main>
+        <div className="text-xs  text-white text-center">This webapp is devloped by the alumni from 04/22</div>
+        </div>
+    </div>
   );
 }
