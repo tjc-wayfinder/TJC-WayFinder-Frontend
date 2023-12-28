@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-[#328C2A] flex h-screen justify-center items-center ">
@@ -33,7 +33,8 @@ export default function Home() {
             />
           </CardContent>
           <CardFooter className="flex items-center justify-center basis-1">
-            <Button className="bg-[#328C2A]">Get Started!</Button>
+            <Button className="bg-[#328C2A]">
+              <Link href="/MapInput">Get Started!</Link></Button>
           </CardFooter>
         </Card>
         <div className="text-xs  text-white text-center">This webapp is devloped by the alumni from 04/22</div>
