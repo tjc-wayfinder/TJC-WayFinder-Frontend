@@ -1,15 +1,18 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { postMessageAndGetImage } from "./getMap";
-
+import { useAtom } from "jotai";
+import { presentLocation, goLocation } from "@/atoms";
 export default function WayFinder() {
-    const [imageUrl, setImageUrl] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
+  const [selectedschLocation] = useAtom(presentLocation);
+  const [destinationLocation] = useAtom(goLocation)
   useEffect(() => {
     const fetchData = async () => {
       const url = await postMessageAndGetImage({
-        currentLocation: "A",
-        destinationLocation: "B",
+        currentLocation: selectedschLocation?.label || '',
+        destinationLocation: destinationLocation?.label || '',
       });
     setImageUrl(url);
     };

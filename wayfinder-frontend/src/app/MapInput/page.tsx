@@ -1,5 +1,5 @@
+"use client";
 import * as React from "react";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { GoLocation } from "./components/GoLocation";
 import { PresentLocation } from "./components/PresentLocation";
+import Link from "next/link";
 export default function MapInput() {
     return (
       <div className="bg-[#328C2A] flex h-screen justify-center items-center ">
@@ -34,8 +35,8 @@ export default function MapInput() {
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="outline">Clear</Button>
-            <Button>WayFind</Button>
+            <Button variant="outline" onClick={()=>window.location.reload()}>Clear</Button>
+            <Button> <Link href="/WayFinder">WayFind</Link></Button>
           </CardFooter>
         </Card>
       </div>

@@ -10,23 +10,22 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { schLocation } from "./locations";
 import { SchLocationList } from "./schLocationList";
-
+import { useAtom } from "jotai";
+import { presentLocation } from "@/atoms";
 export function PresentLocation() {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const [selectedschLocation, setSelectedschLocation] = React.useState<schLocation | null>(
-    null
-  );
+  const [destinationLocation, setSelectedschLocation] =
+    useAtom(presentLocation);
 
   if (isDesktop) {
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button variant="outline" className="w-auto justify-start">
-            {selectedschLocation ? (
-              <>{selectedschLocation.label}</>
+            {destinationLocation ? (
+              <>{destinationLocation.label}</>
             ) : (
               <>Where are you currently?</>
             )}
@@ -46,8 +45,8 @@ export function PresentLocation() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button variant="outline" className="w-auto justify-start">
-          {selectedschLocation ? (
-            <>{selectedschLocation.label}</>
+          {destinationLocation ? (
+            <>{destinationLocation.label}</>
           ) : (
             <>Where are you currently?</>
           )}
@@ -55,7 +54,10 @@ export function PresentLocation() {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mt-4 border-t">
-          <SchLocationList setOpen={setOpen} setSelectedschLocation={setSelectedschLocation} />
+          <SchLocationList
+            setOpen={setOpen}
+            setSelectedschLocation={setSelectedschLocation}
+          />
         </div>
       </DrawerContent>
     </Drawer>
