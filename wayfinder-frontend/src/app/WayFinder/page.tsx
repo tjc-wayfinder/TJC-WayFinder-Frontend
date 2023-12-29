@@ -11,8 +11,8 @@ export default function WayFinder() {
   useEffect(() => {
     const fetchData = async () => {
       const url = await postMessageAndGetImage({
-        currentLocation: selectedschLocation?.label || '',
-        destinationLocation: destinationLocation?.label || '',
+        currentLocation: selectedschLocation?.code || '',
+        destinationLocation: destinationLocation?.code || '',
       });
     setImageUrl(url);
     };
@@ -25,7 +25,7 @@ const myLoader = ({ src }: { src: string }) => {
   };
 
   return (
-    <div>
+    <div className="bg-[#328C2A] flex flex-col h-screen justify-center items-center ">
       <h1>WayFinder</h1>
       {imageUrl ? (
         <Image
