@@ -14,23 +14,47 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Progress } from "@/components/ui/progress";
+
 export default function WayFinder() {
   const [imageUrl, setImageUrl] = useState('');
   const [selectedschLocation] = useAtom(presentLocation);
   const [destinationLocation] = useAtom(goLocation)
+
+  const [progress, setProgress] = useState(0);
+  const [isImageLoaded, setImageLoaded] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const url = await postMessageAndGetImage({
         currentLocation: selectedschLocation?.code || '',
         destinationLocation: destinationLocation?.code || '',
       });
-    setImageUrl(url);
+      setImageUrl(url);
     };
 
     fetchData();
   }, []);
 
-const myLoader = ({ src }: { src: string }) => {
+  useEffect(() => {
+    let progressInterval: NodeJS.Timeout;
+
+    if (imageUrl) {
+      setImageLoaded(false);
+      progressInterval = setInterval(() => {
+        setProgress((oldProgress) => {
+          if (oldProgress >= 100) {
+            clearInterval(progressInterval);
+            return 100;
+          }
+          return Math.min(oldProgress + 10, 100);
+        });
+      }, 500);
+    }
+
+    return () => clearInterval(progressInterval);
+  }, [imageUrl]);
+
+  const myLoader = ({ src }: { src: string }) => {
     return src;
   };
 
@@ -39,18 +63,28 @@ const myLoader = ({ src }: { src: string }) => {
       <Card className="w-auto">
         <CardHeader>
           <CardTitle>Find your way</CardTitle>
-          <CardDescription>Wayfind in one click</CardDescription>
         </CardHeader>
         <CardContent>
           {imageUrl ? (
-            <Image
-              loader={myLoader}
-              src={imageUrl}
-              alt="Map"
-              layout="responsive"
-              width={100}
-              height={100}
-            />
+            <div className="relative">
+              {!isImageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Progress value={progress} />
+                </div>
+              )}
+              <Image
+                loader={myLoader}
+                src={imageUrl}
+                alt="Map"
+                layout="responsive"
+                width={100}
+                height={100}
+                onLoad={() => {
+                  setImageLoaded(true);
+                  setProgress(100);
+                }}
+              />
+            </div>
           ) : null}
         </CardContent>
         <CardFooter className="flex justify-center">
