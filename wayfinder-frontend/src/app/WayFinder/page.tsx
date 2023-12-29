@@ -7,7 +7,6 @@ import { presentLocation, goLocation } from "@/atoms";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,

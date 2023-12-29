@@ -24,7 +24,7 @@ export default function Home() {
           <CardContent>
             <Image
               className="w-auto h-auto"
-              src="/logo.png"
+              src="/Logo.png"
               alt="WayFinder Logo"
               width={200}
               height={200}
