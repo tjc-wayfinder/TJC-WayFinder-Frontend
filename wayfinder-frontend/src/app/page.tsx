@@ -8,6 +8,12 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "WayFinder",
+  description: "WayFinder is a webapp that helps you find your way around TJC!",
+};
 export default function Home() {
   return (
     <div className="bg-[#328C2A] flex h-screen justify-center items-center ">

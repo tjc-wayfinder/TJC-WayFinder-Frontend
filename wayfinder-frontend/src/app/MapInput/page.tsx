@@ -1,6 +1,4 @@
-"use client";
 import * as React from "react";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -11,22 +9,27 @@ import {
 } from "@/components/ui/card";
 import { GoLocation } from "./components/GoLocation";
 import { PresentLocation } from "./components/PresentLocation";
-import Link from "next/link";
+import Buttons from "./components/Buttons";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "WayFinder",
+  description: "WayFinder is a webapp that helps you find your way around TJC!",
+};
+
 export default function MapInput() {
+
     return (
       <div className="bg-[#328C2A] flex h-screen justify-center items-center ">
         <Card className="w-[350px]">
           <CardHeader>
             <CardTitle>Find your way</CardTitle>
-            <CardDescription>
-              Wayfind in one click
-            </CardDescription>
+            <CardDescription>Wayfind in one click</CardDescription>
           </CardHeader>
           <CardContent>
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                <PresentLocation />
+                  <PresentLocation />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <GoLocation />
@@ -35,8 +38,7 @@ export default function MapInput() {
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="outline" onClick={()=>window.location.reload()}>Clear</Button>
-            <Button> <Link href="/WayFinder">WayFind</Link></Button>
+           <Buttons />
           </CardFooter>
         </Card>
       </div>

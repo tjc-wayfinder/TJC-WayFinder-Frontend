@@ -12,10 +12,6 @@ export const schlocations: schLocation[] = [{
   "code": "AS",
   "label": "A Stairs"
 }, {
-  "value": "exnode1 a",
-  "code": "AR1",
-  "label": "ExNode1 A"
-}, {
   "value": "4a",
   "code": "B101",
   "label": "4A"
@@ -88,22 +84,6 @@ export const schlocations: schLocation[] = [{
   "code": "BBR",
   "label": "B Boys (Right)"
 }, {
-  "value": "exnode1 b",
-  "code": "BR1",
-  "label": "ExNode1 B"
-}, {
-  "value": "exnode2 b",
-  "code": "BR2",
-  "label": "ExNode2 B"
-}, {
-  "value": "exnode3 b",
-  "code": "BR3",
-  "label": "ExNode3 B"
-}, {
-  "value": "exnode4 b",
-  "code": "BR4",
-  "label": "ExNode4 B"
-}, {
   "value": "canteen",
   "code": "Canteen",
   "label": "Canteen"
@@ -111,26 +91,6 @@ export const schlocations: schLocation[] = [{
   "value": "court stairs (next to canteen)",
   "code": "CSC",
   "label": "Court Stairs (next to canteen)"
-}, {
-  "value": "exnode1 c",
-  "code": "CR1",
-  "label": "ExNode1 C"
-}, {
-  "value": "exnode2 c",
-  "code": "CR2",
-  "label": "ExNode2 C"
-}, {
-  "value": "exnode3 c",
-  "code": "CR3",
-  "label": "ExNode3 C"
-}, {
-  "value": "exnode4 c",
-  "code": "CR4",
-  "label": "ExNode4 C"
-}, {
-  "value": "exnode5 c",
-  "code": "CR5",
-  "label": "ExNode5 C"
 }, {
   "value": "1a homeroom",
   "code": "D101",
@@ -159,15 +119,7 @@ export const schlocations: schLocation[] = [{
   "value": "handi + fem (blk d)",
   "code": "DT",
   "label": "Handi + Fem (Blk D)"
-}, {
-  "value": "exnode1 d",
-  "code": "DR1",
-  "label": "ExNode1 D"
-}, {
-  "value": "exnode2 d",
-  "code": "DR2",
-  "label": "ExNode2 D"
-}, {
+},  {
   "value": "j1-4",
   "code": "E101",
   "label": "J1-4"
@@ -239,35 +191,7 @@ export const schlocations: schLocation[] = [{
   "value": "e stairs (right)",
   "code": "ESR",
   "label": "E Stairs (Right)"
-}, {
-  "value": "exnode1 e",
-  "code": "ER1",
-  "label": "ExNode1 E"
-}, {
-  "value": "exnode2 e",
-  "code": "ER2",
-  "label": "ExNode2 E"
-}, {
-  "value": "exnode3 e",
-  "code": "ER3",
-  "label": "ExNode3 E"
-}, {
-  "value": "exnode4 e",
-  "code": "ER4",
-  "label": "ExNode4 E"
-}, {
-  "value": "exnode5 e",
-  "code": "ER5",
-  "label": "ExNode5 E"
-}, {
-  "value": "exnode6 e",
-  "code": "ER6",
-  "label": "ExNode6 E"
-}, {
-  "value": "exnode7 e",
-  "code": "ER7",
-  "label": "ExNode7 E"
-}, {
+},  {
   "value": "student council",
   "code": "G101",
   "label": "Student Council"
@@ -296,22 +220,6 @@ export const schlocations: schLocation[] = [{
   "code": "GC",
   "label": "Cafe"
 }, {
-  "value": "exnode1 g",
-  "code": "GR1",
-  "label": "ExNode1 G"
-}, {
-  "value": "exnode2 g",
-  "code": "GR2",
-  "label": "ExNode2 G"
-}, {
-  "value": "exnode3 g",
-  "code": "GR3",
-  "label": "ExNode3 G"
-}, {
-  "value": "exnode4 g",
-  "code": "GR4",
-  "label": "ExNode4 G"
-}, {
   "value": "spare cr",
   "code": "J101",
   "label": "Spare CR"
@@ -339,23 +247,7 @@ export const schlocations: schLocation[] = [{
   "value": "mtl room",
   "code": "J107",
   "label": "MTL Room"
-}, {
-  "value": "exnode1 j",
-  "code": "JR1",
-  "label": "ExNode1 J"
-}, {
-  "value": "exnode2 j",
-  "code": "JR2",
-  "label": "ExNode2 J"
-}, {
-  "value": "exnode3 j",
-  "code": "JR3",
-  "label": "ExNode3 J"
-}, {
-  "value": "exnode4 j",
-  "code": "JR4",
-  "label": "ExNode4 J"
-}, {
+},  {
   "value": "f toilets l",
   "code": "FT1",
   "label": "F Toilets L"
@@ -363,19 +255,7 @@ export const schlocations: schLocation[] = [{
   "value": "f toilets r",
   "code": "FT2",
   "label": "F Toilets R"
-}, {
-  "value": "exnode1 f",
-  "code": "FR1",
-  "label": "ExNode1 F"
-}, {
-  "value": "exnode2 f",
-  "code": "FR2",
-  "label": "ExNode2 F"
-}, {
-  "value": "exnode3 f",
-  "code": "FR3",
-  "label": "ExNode3 F"
-}, {
+},  {
   "value": "amphitheatre",
   "code": "HA",
   "label": "AMPHITHEATRE"
@@ -391,32 +271,4 @@ export const schlocations: schLocation[] = [{
   "value": "seating gallery",
   "code": "HSG",
   "label": "Seating Gallery"
-}, {
-  "value": "exnode1 h",
-  "code": "HR1",
-  "label": "ExNode1 H"
-}, {
-  "value": "exnode2 h",
-  "code": "HR2",
-  "label": "ExNode2 H"
-}, {
-  "value": "exnode3 h",
-  "code": "HR3",
-  "label": "ExNode3 H"
-}, {
-  "value": "exnode4 h",
-  "code": "HR4",
-  "label": "ExNode4 H"
-}, {
-  "value": "exnode5 h",
-  "code": "HR5",
-  "label": "ExNode5 H"
-}, {
-  "value": "exnode6 h",
-  "code": "HR6",
-  "label": "ExNode6 H"
-}, {
-  "value": "exnode7 h",
-  "code": "HR7",
-  "label": "ExNode7 H"
-}] 
+  }, ]
