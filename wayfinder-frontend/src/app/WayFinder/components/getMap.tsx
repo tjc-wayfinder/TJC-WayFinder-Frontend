@@ -11,7 +11,7 @@ export async function postMessageAndGetImage({currentLocation, destinationLocati
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(message),
+    body: JSON.stringify(message), 
   });
 
   if (!response.ok) {
